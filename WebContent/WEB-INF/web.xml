@@ -20,4 +20,12 @@
 		<servlet-name>Hello</servlet-name>
 		<url-pattern>/hello</url-pattern>
 	</servlet-mapping>
+	<servlet>
+		<servlet-name>AddParameterServlet</servlet-name>
+		<servlet-class>pl.pcm.servlets.AddParameterServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AddParameterServlet</servlet-name>
+		<url-pattern>/addparam</url-pattern>
+	</servlet-mapping>
 </web-app>

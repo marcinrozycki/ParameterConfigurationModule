@@ -1,8 +1,13 @@
-package pl.pcm.servlets;
+package pl.pcm.model;
 
 import java.time.LocalDate;
 
 public class ParameterDate extends Parameter {
+
+public ParameterDate() {
+		super();
+		this.type="date";
+	}
 
 private LocalDate value;
 	

@@ -1,9 +1,14 @@
-package pl.pcm.servlets;
+package pl.pcm.model;
 
 public class ParameterNumber extends Parameter {
 
 	private double value;
 
+	public ParameterNumber(){
+		super();
+		this.type="number";
+	}
+	
 	@Override
 	public Object getValue() {
 		return value;

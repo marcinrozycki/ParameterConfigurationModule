@@ -6,11 +6,13 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import pl.pcm.controller.ParameterDao;
+import pl.pcm.controller.SQLParameterParser;
+import pl.pcm.model.Parameter;
+import pl.pcm.model.ParameterFactory;
+
 public class AddParameterServlet extends HttpServlet {
 
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = -135042806481194962L;
 
 	private ParameterDao paramDao;
@@ -30,11 +32,10 @@ public class AddParameterServlet extends HttpServlet {
 		PrintWriter out;
 		try {
 			out = response.getWriter();
-			out.print("Test!");
+			out.print("Parametr dodany.");
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-
 	}
 
 }

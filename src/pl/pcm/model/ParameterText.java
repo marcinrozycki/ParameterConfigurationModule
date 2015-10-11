@@ -1,7 +1,12 @@
-package pl.pcm.servlets;
+package pl.pcm.model;
 
 public class ParameterText extends Parameter {
 	private String value;
+	
+	public ParameterText(){
+		super();
+		this.type="text";
+	}
 
 	@Override
 	public String getValue() {

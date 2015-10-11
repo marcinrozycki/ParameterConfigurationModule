@@ -1,4 +1,4 @@
-package pl.pcm.servlets;
+package pl.pcm.model;
 
 public class ParameterFactory {
 

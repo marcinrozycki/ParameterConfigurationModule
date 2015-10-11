@@ -1,4 +1,4 @@
-package pl.pcm.servlets;
+package pl.pcm.model;
 
 public abstract class Parameter {
 
@@ -33,10 +33,6 @@ public abstract class Parameter {
 
 	public String getType() {
 		return type;
-	};
-
-	public void setType(String type) {
-		this.type = type;
 	};
 
 	public abstract Object getValue();

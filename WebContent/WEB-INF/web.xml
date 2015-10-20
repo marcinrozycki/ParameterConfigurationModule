@@ -1,28 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
-  <display-name>ParameterConfigurationModule</display-name>
-  <welcome-file-list>
-    <welcome-file>index.html</welcome-file>
-    <welcome-file>index.htm</welcome-file>
-    <welcome-file>index.jsp</welcome-file>
-    <welcome-file>default.html</welcome-file>
-    <welcome-file>default.htm</welcome-file>
-    <welcome-file>default.jsp</welcome-file>
-  </welcome-file-list>
-  <servlet>
-    <servlet-name>Hello</servlet-name>
-    <servlet-class>pl.pcm.servlets.Hello</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>Hello</servlet-name>
-    <url-pattern>/hello</url-pattern>
-  </servlet-mapping>
-  <servlet>
-    <servlet-name>AddParameterServlet</servlet-name>
-    <servlet-class>pl.pcm.servlets.AddParameterServlet</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>AddParameterServlet</servlet-name>
-    <url-pattern>/addparam</url-pattern>
-  </servlet-mapping>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+	id="WebApp_ID" version="3.1">
+	<display-name>ParameterConfigurationModule</display-name>
+	<welcome-file-list>
+		<welcome-file>index.xhtml</welcome-file>
+	</welcome-file-list>
+
+
+	<!-- JSF mapping -->
+	<servlet>
+		<servlet-name>Faces Servlet</servlet-name>
+		<servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+
+	<!-- Map these files with JSF -->
+	<servlet-mapping>
+		<servlet-name>Faces Servlet</servlet-name>
+		<url-pattern>/faces/*</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Faces Servlet</servlet-name>
+		<url-pattern>*.jsf</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Faces Servlet</servlet-name>
+		<url-pattern>*.faces</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Faces Servlet</servlet-name>
+		<url-pattern>*.xhtml</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>AddParameterServlet</servlet-name>
+		<servlet-class>pl.pcm.servlets.AddParameterServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AddParameterServlet</servlet-name>
+		<url-pattern>/addparam</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>GetParameterServlet</servlet-name>
+		<servlet-class>pl.pcm.servlets.GetParameterServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>GetParameterServlet</servlet-name>
+		<url-pattern>/getparam</url-pattern>
+	</servlet-mapping>
 </web-app>

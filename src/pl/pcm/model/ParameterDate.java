@@ -4,13 +4,13 @@ import java.time.LocalDate;
 
 public class ParameterDate extends Parameter {
 
-public ParameterDate() {
+	public ParameterDate() {
 		super();
-		this.type="date";
+		this.type = "date";
 	}
 
-private LocalDate value;
-	
+	private LocalDate value;
+
 	@Override
 	public LocalDate getValue() {
 		return value;
@@ -18,7 +18,6 @@ private LocalDate value;
 
 	@Override
 	public void setValue(Object value) {
-		 this.value = (LocalDate) value;
+		this.value = (LocalDate) value;
 	}
-
 }

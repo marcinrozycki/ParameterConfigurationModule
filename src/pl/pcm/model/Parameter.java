@@ -39,4 +39,9 @@ public abstract class Parameter {
 
 	public abstract void setValue(Object value);
 
+	@Override
+	public String toString(){
+		return "Name: " + name + " Description: " + description + " Type: " + type + " Category: " + category + " value: "+ getValue();
+	} 
+
 }

@@ -1,0 +1,28 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:c="http://java.sun.com/jsp/jstl/core">
+<h:head>
+</h:head>
+<h:body>
+	<h1>
+		<h:outputText value="Parameter Configuration Module" />
+	</h1>
+	<h:outputText value="Get parameter by name" />
+	<form action="#{request.contextPath}/getparam" method="get">
+    	<input type="text" name="paramName" />
+    	<input type="submit" />
+	</form>
+	
+	<h:outputText value="Add new parameter" />
+	<form action="#{request.contextPath}/addparam" method="get">
+    	<input type="text" name="name" value="Name"/><br/>
+    	<input type="text" name="description" value="Description" /><br/>
+    	<input type="text" name="category" value="Category"/><br/>
+    	<input type="text" name="type" value="Type" /><br/>
+    	<input type="text" name="value" value="Value" /><br/>
+    	<input type="submit" />
+	</form>
+</h:body>
+</html>

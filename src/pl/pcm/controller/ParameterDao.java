@@ -10,6 +10,7 @@ import pl.pcm.model.Parameter;
 import pl.pcm.model.ParameterFactory;
 
 public class ParameterDao {
+	private static final String VALUE = "value";
 	private final static String DB_URL = "jdbc:postgresql://localhost:5432";
 	private final static String DB_USER = "postgres";
 	private final static String DB_PASS = "postgres";
@@ -40,23 +41,21 @@ public class ParameterDao {
 		String getParamValueQuery = parser.getParameterValueQuery(param);
 		String type = param.getType();
 		ResultSet result = executeQuery(getParamValueQuery);
-		if(result.next()){
 		return parseResultValue(type, result);
-		} else return null;
 	}
 
 	private Object parseResultValue(String type, ResultSet result) throws SQLException {
 
 		switch (type) {
 		case "text": {
-			return result.getString("value");
+			return result.getString(VALUE);
 		}
 		case "date": {
 
-			return result.getDate("value");
+			return result.getDate(VALUE);
 		}
 		case "number": {
-			return result.getInt("value");
+			return result.getInt(VALUE);
 		}
 		default:
 			return null;
@@ -86,6 +85,7 @@ public class ParameterDao {
 		connection.close();
 		result.first();
 		return result;
+
 	}
 
 	private void executeUpdateQuery(String query) {
